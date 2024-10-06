@@ -18,7 +18,7 @@ var marker = new ol.Feature({
 var markerStyle = new ol.style.Style({
   image: new ol.style.Icon({
     anchor: [0.5, 1],
-    src: "/images/pin.png",
+    src: "https://kshdestiny.github.io/Bean-Boutique/images/pin.png",
   }),
 });
 marker.setStyle(markerStyle);
