@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bean Boutique's Coffee</title>
+    <meta
+      name="description"
+      content="Welcome to Bean Boutique, your cozy neighborhood café where coffee meets community. At Bean Boutique, we pride ourselves on serving only the finest, freshly brewed coffee, crafted with passion and precision. Whether you're here to enjoy a quiet moment with a cup of artisanal coffee or to catch up with friends over a delicious pastry, our warm and welcoming atmosphere is designed to make you feel at home. We offer a variety of coffee blends, including specialty brews like pour over and espresso, alongside a selection of teas, fresh pastries, and snacks. Stop by, relax, and let us treat you to the perfect café experience."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/KSHDestiny" />
+    <meta property="og:title" content="Bean Boutique" />
+    <meta
+      property="og:description"
+      content="Welcome to Bean Boutique, your cozy neighborhood café where coffee meets community. At Bean Boutique, we pride ourselves on serving only the finest, freshly brewed coffee, crafted with passion and precision. Whether you're here to enjoy a quiet moment with a cup of artisanal coffee or to catch up with friends over a delicious pastry, our warm and welcoming atmosphere is designed to make you feel at home. We offer a variety of coffee blends, including specialty brews like pour over and espresso, alongside a selection of teas, fresh pastries, and snacks. Stop by, relax, and let us treat you to the perfect café experience."
+    />
+    <meta property="og:image" content="./images/Enjoying_Cafe.jpeg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="bean_boutique_image" />
+    <meta property="twitter:url" content="https://github.com/KSHDestiny" />
+    <meta property="twitter:title" content="Bean Boutique" />
+    <meta
+      property="twitter:description"
+      content="Welcome to Bean Boutique, your cozy neighborhood café where coffee meets community. At Bean Boutique, we pride ourselves on serving only the finest, freshly brewed coffee, crafted with passion and precision. Whether you're here to enjoy a quiet moment with a cup of artisanal coffee or to catch up with friends over a delicious pastry, our warm and welcoming atmosphere is designed to make you feel at home. We offer a variety of coffee blends, including specialty brews like pour over and espresso, alongside a selection of teas, fresh pastries, and snacks. Stop by, relax, and let us treat you to the perfect café experience."
+    />
+    <meta property="twitter:image" content="./images/Enjoying_Cafe.jpeg" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-black">
+    <header>
+      <nav class="navbar fixed-top navbar-expand-xl bg-secondary opacity-90">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center">
+            <img
+              src="./images/bean_logo.jpg"
+              width="25px"
+              class="img-fluid me-3 rounded"
+              alt="Bean Boutique Logo"
+            />
+            <a class="navbar-brand text-primary" href="index.html"
+              >Bean Boutique</a
+            >
+          </div>
+          <button
+            class="navbar-toggler bg-primary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav nav-underline ms-auto">
+              <a
+                class="nav-link text-primary text-center"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+              <a
+                class="nav-link active text-primary text-center"
+                href="coffee.html"
+                >Coffee Selection</a
+              >
+              <a class="nav-link text-primary text-center" href="brewing.html"
+                >Brewing Equipment</a
+              >
+              <a class="nav-link text-primary text-center" href="event.html"
+                >Events and Workshops</a
+              >
+              <a class="nav-link text-primary text-center" href="shopping.html"
+                >Shopping Cart</a
+              >
+              <a class="nav-link text-primary text-center" href="offer.html"
+                >Special Offers and Subscriptions</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="modal fade"
+        id="discountModal"
+        tabindex="-1"
+        aria-labelledby="discountModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-secondary text-primary">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="discountModalLabel">
+                Welcome to Bean Boutique!
+              </h1>
+              <button
+                type="button"
+                class="btn-close bg-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="discountModalBody">
+              <p>
+                Get 15% Off your first purchase! Sign up with your email to
+                claim your discount
+                <i class="fa-regular fa-face-smile-wink"></i>
+              </p>
+              <form id="signupForm">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Enter your email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="name@example.com"
+                    required
+                  />
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="btn btn-primary float-end">
+                  Claim Discount
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="successModal"
+        tabindex="-1"
+        aria-labelledby="successModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-secondary text-primary">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="successModalLabel">
+                Your subscription is succeed!
+              </h1>
+            </div>
+            <div class="modal-body">
+              <p id="successModalText"></p>
+              <button
+                type="button"
+                class="btn btn-secondary text-primary float-end"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="container mt-5 mx-auto">
+      <div
+        class="mt-5 pt-5 text-primary d-flex justify-content-between align-items-center"
+      >
+        <div class="d-flex align-items-center">
+          <span class="h3 pe-3">Available Coffee Menu</span>
+        </div>
+        <div class="input-group ms-auto w-50">
+          <div
+            class="filter-group input-group ms-auto"
+            role="group"
+            aria-label="Default button group"
+          >
+            <input
+              id="search-coffee"
+              class="form-control"
+              placeholder="Search for coffee"
+            />
+            <button type="button" class="btn btn-primary" data-filter="*">
+              All
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-filter=".hot-menu"
+            >
+              Hot
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-filter=".cold-menu"
+            >
+              Cold
+            </button>
+          </div>
+        </div>
+      </div>
+      <h4
+        class="text-white opacity-75 mt-3 mb-1 text-center"
+        id="hot-menu-header"
+      >
+        Hot Selections <i class="fa-solid fa-mug-hot ps-1"></i>
+      </h4>
+      <div
+        id="no-hot-results"
+        class="d-none h2 text-center text-primary my-5 py-5"
+      >
+        No such hot coffee found!
+      </div>
+      <article class="row g-3 menu-container" id="coffee-hot-menu">
+        <div
+          class="card menu-item hot-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
+        >
+          <div class="overflow-hidden rounded">
+            <img
+              src="./images/Espresso.jpg"
+              class="card-img-top image"
+              alt="Espresso Image"
+            />
+          </div>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">
+              Espresso (Hot) <span class="float-end">$2.99</span>
+            </h5>
+            <div class="text-primary opacity-75">
+              <small class="card-text">
+                A concentrated coffee brewed by forcing hot water through
+                finely-ground coffee beans under high pressure </small
+              ><br />
+              <br />
+              <small class="card-text"
+                >Taste : <span>slightly bitter, roasted taste</span></small
+              >
+              <br />
+              <small class="card-text">
+                Brewing Method :
+                <span>
+                  Brewed by forcing hot water through finely-ground coffee at
+                  high pressure.</span
+                > </small
+              ><br /><br />
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star-half-stroke color-warning"></i>
+              </div>
+              <a
+                href="shopping.html"
+                class="btn btn-secondary text-white float-end"
+                >Add to Cart <i class="fa-solid fa-cart-shopping ps-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card menu-item hot-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
+        >
+          <div class="overflow-hidden rounded">
+            <img
+              src="./images/Caffè americano.jpg"
+              class="card-img-top image"
+              alt="Americano Image"
+            />
+          </div>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">
+              Caffè americano (Hot) <span class="float-end">$3.49</span>
+            </h5>
+            <div class="text-primary opacity-75">
+              <small class="card-text">
+                A simple yet delicious coffee beverage made by diluting one or
+                two shots of espresso with hot water </small
+              ><br /><br />
+              <small class="card-text"
+                >Taste :
+                <span> smooth, mellow taste with a mild bitterness</span></small
+              >
+              <small class="card-text">
+                Brewing Method :
+                <span>Diluting a shot of espresso with hot water</span>
+              </small>
+            </div>
+            <br />
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+              </div>
+              <a
+                href="shopping.html"
+                class="btn btn-secondary text-white float-end"
+                >Add to Cart <i class="fa-solid fa-cart-shopping ps-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card menu-item hot-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
+        >
+          <div class="overflow-hidden rounded">
+            <img
+              src="./images/Cappuccino.jpg"
+              class="card-img-top image"
+              alt="Cappuccino Image"
+            />
+          </div>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">
+              Cappuccino (Hot) <span class="float-end">$3.49</span>
+            </h5>
+            <div class="text-primary opacity-75">
+              <small class="card-text">
+                Coffee drink made with equal parts espresso, steamed milk, and
+                frothed milk </small
+              ><br /><br />
+              <small class="card-text">
+                Taste :
+                <span>
+                  slightly sweet flavor with a hint of bitterness</span
+                > </small
+              ><br />
+              <small class="card-text">
+                Brewing Method :
+                <span
+                  >Brewing a shot of espresso with steamed milk and thick milk
+                  foam on top</span
+                >
+              </small>
+            </div>
+            <br />
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+              </div>
+              <a
+                href="shopping.html"
+                class="btn btn-secondary text-white float-end"
+                >Add to Cart <i class="fa-solid fa-cart-shopping ps-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card menu-item hot-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
+        >
+          <div class="overflow-hidden rounded">
+            <img
+              src="./images/Latte.jpg"
+              class="card-img-top image"
+              alt="Latte Image"
+            />
+          </div>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">
+              Cafe Latte (Hot) <span class="float-end">$3.49</span>
+            </h5>
+            <div class="text-primary opacity-75">
+              <small class="card-text">
+                A hot café latte features a smooth, creamy texture, combining
+                rich espresso with steamed milk and a light layer of micro-foam
+                on top </small
+              ><br /><br />
+              <small class="card-text"
+                >Taste :
+                <b> balanced flavor with the milk's sweetness</b></small
+              ><br />
+              <small class="card-text">
+                Brewing Method :
+                <b>
+                  Combining a shot of espresso with steamed milk, topped with a
+                  thin layer of foam</b
+                >
+              </small>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+              </div>
+              <a
+                href="shopping.html"
+                class="btn btn-secondary text-white float-end"
+                >Add to Cart <i class="fa-solid fa-cart-shopping ps-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <h4
+        class="text-white opacity-75 mt-5 mb-1 text-center"
+        id="cold-menu-header"
+      >
+        Cold Selections <i class="fa-regular fa-snowflake ps-1"></i>
+      </h4>
+      <div
+        id="no-cold-results"
+        class="d-none h2 text-center text-primary my-5 py-5"
+      >
+        No such cold coffee found!
+      </div>
+      <article class="row g-3 menu-container" id="coffee-cold-menu">
+        <div
+          class="card menu-item cold-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
+        >
+          <div class="overflow-hidden rounded">
+            <img
+              src="./images/americano cold.jpg"
+              class="card-img-top image"
+              alt="Cold Americano Image"
+            />
+          </div>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">
+              Americano (Cold) <span class="float-end">$3.99</span>
+            </h5>
+            <div class="text-primary opacity-75">
+              <small class="card-text">
+                A refreshing twist on the classic drink, featuring bold espresso
+                diluted with cold water and served over ice </small
+              ><br /><br />
+              <small
+                >Taste : <span>less bitter and more refreshing</span></small
+              >
+              <small
+                ><br />
+                Brewing Method :
+                <span
+                  >Diluting a shot of espresso with cold water and serving it
+                  over ice.</span
+                >
+              </small>
+            </div>
+            <br />
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+              </div>
+              <a
+                href="shopping.html"
+                class="btn btn-secondary text-white float-end"
+                >Add to Cart <i class="fa-solid fa-cart-shopping ps-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card menu-item cold-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
+        >
+          <div class="overflow-hidden rounded">
+            <img
+              src="./images/Cappuccino Cold.jpg"
+              class="card-img-top image"
+              alt="Cold Cappuccino Image"
+            />
+          </div>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">
+              Cappuccino (Cold) <span class="float-end">$3.99</span>
+            </h5>
+            <div class="text-primary opacity-75">
+              <small class="card-text">
+                A refreshing variation of the classic drink, featuring chilled
+                espresso mixed with cold milk and topped with a frothy layer of
+                cold foam </small
+              ><br /><br />
+              <small class="card-text"
+                >Taste : <span> Creamy, smooth texture</span></small
+              ><br />
+              <small class="card-text">
+                Brewing Method :
+                <span
+                  >Pulling a shot of espresso, chilling it, and then combining
+                  it with cold milk and ice</span
+                >
+              </small>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+              </div>
+              <a
+                href="shopping.html"
+                class="btn btn-secondary text-white float-end"
+                >Add to Cart <i class="fa-solid fa-cart-shopping ps-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card menu-item cold-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
+        >
+          <div class="overflow-hidden rounded">
+            <img
+              src="./images/Cafe Latte (Cold).jpg"
+              class="card-img-top image"
+              alt="Cold Latte Image"
+            />
+          </div>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">
+              Coffee Latte (Cold) <span class="float-end">$3.99</span>
+            </h5>
+            <div class="text-primary opacity-75">
+              <small class="card-text">
+                A smooth, creamy taste with a delicate balance between the
+                boldness of espresso and the richness of cold milk. </small
+              ><br /><br />
+              <small>
+                Taste :
+                <b> slight bitterness with velvety sweetness</b> </small
+              ><br />
+              <small>
+                Brewing Method :
+                <b
+                  >Brewing espresso first, then pouring it over ice and adding
+                  cold milk</b
+                >
+              </small>
+            </div>
+            <br />
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+              </div>
+              <a
+                href="shopping.html"
+                class="btn btn-secondary text-white float-end"
+                >Add to Cart <i class="fa-solid fa-cart-shopping ps-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card menu-item cold-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
+        >
+          <div class="overflow-hidden rounded">
+            <img
+              src="./images/Mocha.jpg"
+              class="card-img-top image"
+              alt="Mocha Image"
+            />
+          </div>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">
+              Mocha (Cold) <span class="float-end">$3.99</span>
+            </h5>
+            <div class="text-primary opacity-75">
+              <small class="card-text">
+                A rich, chocolatey flavor combined with smooth espresso and cold
+                milk that's perfect for chocolate lovers </small
+              ><br /><br />
+              <small class="card-text"
+                >Taste :
+                <span> Rich, chocolatey, refreshing delight</span></small
+              ><br />
+              <small class="card-text">
+                Brewing Method :
+                <span
+                  >Mixing espresso with cold chocolate syrup and milk, served
+                  over ice</span
+                >
+              </small>
+            </div>
+            <br />
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+              </div>
+              <a
+                href="shopping.html"
+                class="btn btn-secondary text-white float-end"
+                >Add to Cart <i class="fa-solid fa-cart-shopping ps-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <footer
+      class="container-fluid row mt-5 mx-auto bg-black align-items-center"
+    >
+      <section class="col-xl-5 offset-xl-1 mt-3">
+        <h5 class="text-primary">ABOUT US</h5>
+        <p class="text-white">
+          Welcome to Bean Boutique, your cozy neighborhood café where coffee
+          meets community. At Bean Boutique, we pride ourselves on serving only
+          the finest, freshly brewed coffee, crafted with passion and precision.
+          Whether you're here to enjoy a quiet moment with a cup of artisanal
+          coffee or to catch up with friends over a delicious pastry, our warm
+          and welcoming atmosphere is designed to make you feel at home. We
+          offer a variety of coffee blends, including specialty brews like pour
+          over and espresso, alongside a selection of teas, fresh pastries, and
+          snacks. Stop by, relax, and let us treat you to the perfect café
+          experience
+        </p>
+      </section>
+      <section class="col-xl-5 offset-xl-1 mt-3">
+        <div>
+          <h5 class="text-primary">CONTACT</h5>
+          <p class="text-white">
+            <b>Address</b> : 1881 Wood Duck Drive, Marquette, Michigan, United
+            States <br />
+            <b>Phone</b> : +85587724481
+          </p>
+        </div>
+
+        <div class="pb-3">
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fa-brands fa-facebook me-2"></i
+          ></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="fa-brands fa-instagram me-2"></i
+          ></a>
+          <a href="https://www.telegram.org/" target="_blank"
+            ><i class="fa-brands fa-telegram me-2"></i
+          ></a>
+          <a href="mailto: kaungsathein.5899@gmail.com" target="_blank"
+            ><i class="fa-solid fa-envelope me-2"></i
+          ></a>
+          <a href="tel: 85587714482" target="_blank"
+            ><i class="fa-solid fa-phone me-2"></i
+          ></a>
+        </div>
+      </section>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/typeit@8.8.5/dist/index.umd.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/coffee.js"></script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap");
+
+$primary: #e2725b;
+$secondary: #1f1b1d;
+
+$font-family-base: "Yanone Kaffeesatz", sans-serif;
+$font-size-base: 1.2rem;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+);
+
+$utilities: (
+  "opacity": (
+    property: opacity,
+    values: (
+      0: 0,
+      25: 0.25,
+      50: 0.5,
+      75: 0.75,
+      90: 0.9,
+      100: 1,
+    ),
+  ),
+);
+
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: $secondary; /* or add it to the track */
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: $primary;
+}
+
+.color-warning {
+  color: gold;
+}
+
+.image {
+  transition: all 0.25s linear 0s;
+}
+.image:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Grid Container */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Product Items */
+.product-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Product Image */
+.product-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Hidden Info (initially) */
+.product-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover Effect: Show Product Info */
+.product-item:hover .product-info {
+  opacity: 1;
+}
+
+/* Hover Effect: Zoom the image */
+.product-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Button Styling */
+button {
+  background-color: #ff6f61;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";

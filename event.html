@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bean Boutique's Event</title>
+    <meta
+      name="description"
+      content="Welcome to Bean Boutique, your cozy neighborhood café where coffee meets community. At Bean Boutique, we pride ourselves on serving only the finest, freshly brewed coffee, crafted with passion and precision. Whether you're here to enjoy a quiet moment with a cup of artisanal coffee or to catch up with friends over a delicious pastry, our warm and welcoming atmosphere is designed to make you feel at home. We offer a variety of coffee blends, including specialty brews like pour over and espresso, alongside a selection of teas, fresh pastries, and snacks. Stop by, relax, and let us treat you to the perfect café experience."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/KSHDestiny" />
+    <meta property="og:title" content="Bean Boutique" />
+    <meta
+      property="og:description"
+      content="Welcome to Bean Boutique, your cozy neighborhood café where coffee meets community. At Bean Boutique, we pride ourselves on serving only the finest, freshly brewed coffee, crafted with passion and precision. Whether you're here to enjoy a quiet moment with a cup of artisanal coffee or to catch up with friends over a delicious pastry, our warm and welcoming atmosphere is designed to make you feel at home. We offer a variety of coffee blends, including specialty brews like pour over and espresso, alongside a selection of teas, fresh pastries, and snacks. Stop by, relax, and let us treat you to the perfect café experience."
+    />
+    <meta property="og:image" content="./images/Enjoying_Cafe.jpeg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="bean_boutique_image" />
+    <meta property="twitter:url" content="https://github.com/KSHDestiny" />
+    <meta property="twitter:title" content="Bean Boutique" />
+    <meta
+      property="twitter:description"
+      content="Welcome to Bean Boutique, your cozy neighborhood café where coffee meets community. At Bean Boutique, we pride ourselves on serving only the finest, freshly brewed coffee, crafted with passion and precision. Whether you're here to enjoy a quiet moment with a cup of artisanal coffee or to catch up with friends over a delicious pastry, our warm and welcoming atmosphere is designed to make you feel at home. We offer a variety of coffee blends, including specialty brews like pour over and espresso, alongside a selection of teas, fresh pastries, and snacks. Stop by, relax, and let us treat you to the perfect café experience."
+    />
+    <meta property="twitter:image" content="./images/Enjoying_Cafe.jpeg" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-secondary">
+    <header>
+      <nav class="navbar fixed-top navbar-expand-xl bg-secondary opacity-90">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center">
+            <img
+              src="./images/bean_logo.jpg"
+              width="25px"
+              class="img-fluid me-3 rounded"
+              alt="Bean Boutique Logo"
+            />
+            <a class="navbar-brand text-primary" href="index.html"
+              >Bean Boutique</a
+            >
+          </div>
+          <button
+            class="navbar-toggler bg-primary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav nav-underline ms-auto">
+              <a
+                class="nav-link text-primary text-center"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+              <a class="nav-link text-primary text-center" href="coffee.html"
+                >Coffee Selection</a
+              >
+              <a class="nav-link text-primary text-center" href="brewing.html"
+                >Brewing Equipment</a
+              >
+              <a
+                class="nav-link active text-primary text-center"
+                href="event.html"
+                >Events and Workshops</a
+              >
+              <a class="nav-link text-primary text-center" href="shopping.html"
+                >Shopping Cart</a
+              >
+              <a class="nav-link text-primary text-center" href="offer.html"
+                >Special Offers and Subscriptions</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="modal fade"
+        id="discountModal"
+        tabindex="-1"
+        aria-labelledby="discountModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-secondary text-primary">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="discountModalLabel">
+                Welcome to Bean Boutique!
+              </h1>
+              <button
+                type="button"
+                class="btn-close bg-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="discountModalBody">
+              <p>
+                Get 15% Off your first purchase! Sign up with your email to
+                claim your discount
+                <i class="fa-regular fa-face-smile-wink"></i>
+              </p>
+              <form id="signupForm">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Enter your email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="name@example.com"
+                    required
+                  />
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="btn btn-primary float-end">
+                  Claim Discount
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="successModal"
+        tabindex="-1"
+        aria-labelledby="successModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-secondary text-primary">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="successModalLabel">
+                Your subscription is succeed!
+              </h1>
+            </div>
+            <div class="modal-body">
+              <p id="successModalText"></p>
+              <button
+                type="button"
+                class="btn btn-secondary text-primary float-end"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="container">
+      <article class="mt-5 pt-5 text-white">
+        <h3 class="text-primary">Upcoming Events</h3>
+        <section class="row mt-5">
+          <figure class="col-xl-3 col-lg-4 mx-lg-0 col-md-6 mx-auto">
+            <img
+              src="./images/Board Game Nights.jpg"
+              width="100%"
+              class="image rounded"
+              alt="Board Game Event"
+            />
+          </figure>
+          <div class="col-xl-7 col-lg-8 ps-5">
+            <h4 class="text-primary">Board Game Night at Bean Boutique</h4>
+            <small>31st January, 2025</small>
+            <p class="pt-3">
+              Join us for a delightful evening filled with laughter and strategy
+              at our upcoming Board Game Night at Bean Boutique! Attendees would
+              enjoy classic and modern board games, from "Catan" to "Ticket to
+              Ride," creating an atmosphere of friendly competition. With
+              complimentary coffee and snacks, participants could make new
+              friends while exploring different strategies. The highlight of the
+              night would be the tournament, where the top players could
+              showcase their skills. We can't wait to host our event — stay
+              tuned for more gaming adventures!
+            </p>
+          </div>
+        </section>
+        <section class="row mt-5 pt-5 flex-column-reverse flex-lg-row">
+          <div class="col-xl-7 offset-xl-2 col-lg-8 pe-5">
+            <h4 class="text-primary">Coffee Tasting Events</h4>
+            <small>29th May, 2025</small>
+            <p class="pt-3">
+              Our Coffee Tasting Event is a delightful gathering where attendees
+              could explore various single-origin coffees and blends, guided by
+              our expert baristas. Guests would enjoy discovering unique flavor
+              profiles, learning about different brewing techniques, and
+              engaging in lively conversations with fellow coffee enthusiasts.
+              The warm, inviting atmosphere could make it a memorable afternoon
+              of tasting, learning, and sharing a passion for great coffee. We
+              look forward to hosting the event soon!
+            </p>
+          </div>
+          <figure class="col-xl-3 col-lg-4 mx-lg-0 col-md-6 mx-auto">
+            <img
+              src="./images/Coffee Tasting Events.jpg"
+              width="100%"
+              class="image rounded"
+              alt="Coffee Tasting Event"
+            />
+          </figure>
+        </section>
+      </article>
+      <article class="mt-5 pt-5 text-white">
+        <h3 class="text-primary">Upcoming Workshops</h3>
+        <section class="row">
+          <figure class="mt-5 col-lg-8 col-md-10 mx-auto">
+            <img
+              src="./images/Coffee Workshop.jpg"
+              width="100%"
+              class="rounded image"
+              alt="Coffee Workshop"
+            />
+            <figcaption class="my-3 text-center">
+              <small> At Bean Boutique Cafe ( on 1st August, 2025 ) </small>
+            </figcaption>
+          </figure>
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p>
+              Our upcoming coffee workshop at Bean Boutique would be a great
+              success! Attendees would gather to learn various brewing
+              techniques, from pour-over to espresso, guided by our in-house
+              coffee experts. The hands-on session would give participants the
+              chance to experiment with professional-grade equipment and explore
+              the intricacies of coffee extraction and flavor.
+            </p>
+            <p>
+              The interactive environment could spark engaging discussions on
+              how to fine-tune brewing methods to achieve the perfect cup.
+              Everyone could walk away with newfound skills, a better
+              understanding of coffee, and, of course, a few favorite brews. It
+              would be a fun and educational afternoon, and we look forward to
+              host the workshop!
+            </p>
+          </div>
+        </section>
+      </article>
+      <article class="mt-5 pt-5 text-white">
+        <h3 class="text-primary">Popular Events</h3>
+        <section class="row mt-5">
+          <figure class="col-xl-3 offset-xl-1 col-lg-4 col-md-6 mx-md-auto">
+            <img
+              src="./images/Winter Event.jpg"
+              width="100%"
+              class="rounded image"
+              alt="Winter Event"
+            />
+          </figure>
+          <div class="col-xl-8 col-lg-8 ps-5">
+            <h4 class="text-primary">Winter Drinks Special</h4>
+            <small>Starting December 1, 2024</small>
+            <p class="mt-3">
+              Get into the festive spirit with our Winter Drinks Special at Bean
+              Boutique! Starting this holiday season, we'll be serving up a
+              variety of cozy, delicious winter beverages perfect for warming
+              you up on chilly days. From rich hot chocolates topped with
+              whipped cream and gingerbread to spiced lattes infused with
+              seasonal flavors, there's something for everyone to enjoy.
+            </p>
+            <p>
+              Join us in celebrating the winter months with these limited-time
+              drinks, crafted to bring you comfort and joy. Stay tuned for more
+              details on our festive menu and special holiday offers. We look
+              forward to welcoming you to enjoy the warmth and cheer of the
+              season at Bean Boutique!
+            </p>
+          </div>
+        </section>
+      </article>
+      <article class="mt-5 pt-5 text-white row">
+        <h5 class="text-primary text-center">
+          To Participate, Sign up online now!
+        </h5>
+        <section class="col-lg-6 col-12 mt-5 mx-auto">
+          <form action="#">
+            <div class="d-flex align-items-center">
+              <label for="firstName" class="col-3 mx-auto"
+                >Enter Your First Name :
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="John"
+                id="firstName"
+              />
+            </div>
+            <div class="d-flex align-items-center mt-3">
+              <label for="lastName" class="col-3 mx-auto"
+                >Enter Your Last Name :
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Doe"
+                id="lastName"
+              />
+            </div>
+            <div class="d-flex align-items-center mt-3">
+              <label for="email" class="col-3 mx-auto"
+                >Enter Your Email :
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="example@gmail.com"
+                id="email"
+              />
+            </div>
+            <button type="button" class="float-end btn btn-primary w-25 mt-3">
+              Sign Up
+            </button>
+          </form>
+        </section>
+      </article>
+    </section>
+    <footer
+      class="container-fluid row mt-5 mx-auto bg-black align-items-center"
+    >
+      <section class="col-xl-5 offset-xl-1 mt-3">
+        <h5 class="text-primary">ABOUT US</h5>
+        <p class="text-white">
+          Welcome to Bean Boutique, your cozy neighborhood café where coffee
+          meets community. At Bean Boutique, we pride ourselves on serving only
+          the finest, freshly brewed coffee, crafted with passion and precision.
+          Whether you're here to enjoy a quiet moment with a cup of artisanal
+          coffee or to catch up with friends over a delicious pastry, our warm
+          and welcoming atmosphere is designed to make you feel at home. We
+          offer a variety of coffee blends, including specialty brews like pour
+          over and espresso, alongside a selection of teas, fresh pastries, and
+          snacks. Stop by, relax, and let us treat you to the perfect café
+          experience
+        </p>
+      </section>
+      <section class="col-xl-5 offset-xl-1 mt-3">
+        <div>
+          <h5 class="text-primary">CONTACT</h5>
+          <p class="text-white">
+            <b>Address</b> : 1881 Wood Duck Drive, Marquette, Michigan, United
+            States <br />
+            <b>Phone</b> : +85587724481
+          </p>
+        </div>
+
+        <div class="pb-3">
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fa-brands fa-facebook me-2"></i
+          ></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="fa-brands fa-instagram me-2"></i
+          ></a>
+          <a href="https://www.telegram.org/" target="_blank"
+            ><i class="fa-brands fa-telegram me-2"></i
+          ></a>
+          <a href="mailto: kaungsathein.5899@gmail.com" target="_blank"
+            ><i class="fa-solid fa-envelope me-2"></i
+          ></a>
+          <a href="tel: 85587714482" target="_blank"
+            ><i class="fa-solid fa-phone me-2"></i
+          ></a>
+        </div>
+      </section>
+    </footer>
+
+    <script src="./js/app.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
