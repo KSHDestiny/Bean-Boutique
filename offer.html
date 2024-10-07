@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bean Boutique's Offer</title>
-    <link rel="icon" type="image/x-icon" href="images/bean_logo.jpg" />
+    <link rel="icon" type="image/x-icon" href="images/bean_logo.jpg">
     <meta
       name="description"
       content="Welcome to Bean Boutique, your cozy neighborhood café where coffee meets community. At Bean Boutique, we pride ourselves on serving only the finest, freshly brewed coffee, crafted with passion and precision. Whether you're here to enjoy a quiet moment with a cup of artisanal coffee or to catch up with friends over a delicious pastry, our warm and welcoming atmosphere is designed to make you feel at home. We offer a variety of coffee blends, including specialty brews like pour over and espresso, alongside a selection of teas, fresh pastries, and snacks. Stop by, relax, and let us treat you to the perfect café experience."
-    />
+   >
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://github.com/KSHDestiny" />
-    <meta property="og:title" content="Bean Boutique" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/KSHDestiny">
+    <meta property="og:title" content="Bean Boutique">
     <meta
       property="og:description"
       content="Welcome to Bean Boutique, your cozy neighborhood café where coffee meets community. At Bean Boutique, we pride ourselves on serving only the finest, freshly brewed coffee, crafted with passion and precision. Whether you're here to enjoy a quiet moment with a cup of artisanal coffee or to catch up with friends over a delicious pastry, our warm and welcoming atmosphere is designed to make you feel at home. We offer a variety of coffee blends, including specialty brews like pour over and espresso, alongside a selection of teas, fresh pastries, and snacks. Stop by, relax, and let us treat you to the perfect café experience."
-    />
-    <meta property="og:image" content="./images/Enjoying_Cafe.jpeg" />
+   >
+    <meta property="og:image" content="./images/Enjoying_Cafe.jpeg">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="bean_boutique_image" />
-    <meta property="twitter:url" content="https://github.com/KSHDestiny" />
-    <meta property="twitter:title" content="Bean Boutique" />
+    <meta property="twitter:card" content="bean_boutique_image">
+    <meta property="twitter:url" content="https://github.com/KSHDestiny">
+    <meta property="twitter:title" content="Bean Boutique">
     <meta
       property="twitter:description"
       content="Welcome to Bean Boutique, your cozy neighborhood café where coffee meets community. At Bean Boutique, we pride ourselves on serving only the finest, freshly brewed coffee, crafted with passion and precision. Whether you're here to enjoy a quiet moment with a cup of artisanal coffee or to catch up with friends over a delicious pastry, our warm and welcoming atmosphere is designed to make you feel at home. We offer a variety of coffee blends, including specialty brews like pour over and espresso, alongside a selection of teas, fresh pastries, and snacks. Stop by, relax, and let us treat you to the perfect café experience."
-    />
-    <meta property="twitter:image" content="./images/Enjoying_Cafe.jpeg" />
-    <link href="./css/style.css" rel="stylesheet" />
+   >
+    <meta property="twitter:image" content="./images/Enjoying_Cafe.jpeg">
+    <link href="./css/style.css" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+   >
   </head>
   <body class="bg-secondary">
     <header>
@@ -45,10 +45,10 @@
           <div class="d-flex align-items-center">
             <img
               src="./images/bean_logo.jpg"
-              width="25px"
+              width="25"
               class="img-fluid me-3 rounded"
               alt="Bean Boutique Logo"
-            />
+           >
             <a class="navbar-brand text-primary" href="index.html"
               >Bean Boutique</a
             >
@@ -121,14 +121,14 @@
               </p>
               <form id="signupForm">
                 <div class="mb-3">
-                  <label for="email" class="form-label">Enter your email</label>
+                  <label for="discountEmail" class="form-label">Enter your email</label>
                   <input
                     type="email"
                     class="form-control"
-                    id="email"
+                    id="discountEmail"
                     placeholder="name@example.com"
                     required
-                  />
+                 >
                 </div>
                 <button
                   type="button"
@@ -174,17 +174,17 @@
         </div>
       </div>
     </header>
-    <section class="container-fluid position-relative">
+    <div class="container-fluid position-relative">
       <figure class="position-relative">
         <img
           src="./images/offer_cover.jpg"
           class="d-block w-100 object-fit-cover"
           alt="Offer Cover"
-        />
+       >
         <figcaption
           class="position-absolute top-50 end-0 translate-middle text-white text-center d-none d-md-block"
         >
-          <h1 class="display-4 text-primary">Special Offers Just For You!</h1>
+          <span class="display-4 text-primary">Special Offers Just For You!</span>
           <p>Subscribe now and get exclusive discounts on your next order!</p>
           <button
             type="button"
@@ -206,9 +206,9 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
+              <span class="display-4 modal-title fs-5" id="exampleModalLabel">
                 Sign up to subscribe
-              </h1>
+              </span>
               <button
                 type="button"
                 class="btn-close"
@@ -225,7 +225,7 @@
                     class="form-control"
                     placeholder="example@gmail.com"
                     id="email"
-                  />
+                 >
                 </div>
                 <div class="d-flex align-items-center mt-3">
                   <label for="password" class="col-3 mx-auto"
@@ -236,7 +236,7 @@
                     class="form-control"
                     placeholder="**********"
                     id="password"
-                  />
+                 >
                 </div>
               </form>
             </div>
@@ -253,16 +253,16 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <section class="container-fluid row">
       <div class="product-grid col-lg-4 col-md-6">
         <figure class="product-item">
           <img
             src="./images/offer.jpg"
-            width="100%"
-            height="300px"
+            height="300"
+            class="w-100"
             alt="Offer"
-          />
+         >
           <figcaption
             class="product-info d-flex flex-column justify-content-center"
           >
@@ -280,11 +280,11 @@
       <div class="product-grid col-lg-4 col-md-6">
         <figure class="product-item">
           <img
-            src="./images/buy two get one.png"
-            width="100%"
-            height="300px"
+            src="./images/buy_two_get_one.png"
+            height="300"
+            class="w-100"
             alt="Buy Two Get One"
-          />
+         >
           <figcaption
             class="product-info d-flex flex-column justify-content-center"
           >
@@ -302,11 +302,11 @@
       <div class="product-grid col-lg-4 col-md-12">
         <figure class="product-item">
           <img
-            src="./images/free delivery.png"
-            width="100%"
-            height="300px"
+            src="./images/free_delivery.png"
+            height="300"
+            class="w-100"
             alt="Free delivery"
-          />
+         >
           <figcaption
             class="product-info d-flex flex-column justify-content-center"
           >
@@ -344,7 +344,7 @@
           <h5 class="text-primary">CONTACT</h5>
           <p class="text-white">
             <b>Address</b> : 1881 Wood Duck Drive, Marquette, Michigan, United
-            States <br />
+            States <br>
             <b>Phone</b> : +85587724481
           </p>
         </div>
@@ -359,10 +359,10 @@
           <a href="https://www.telegram.org/" target="_blank"
             ><i class="fa-brands fa-telegram me-2"></i
           ></a>
-          <a href="mailto: kaungsathein.5899@gmail.com" target="_blank"
+          <a href="mailto:kaungsathein.5899@gmail.com" target="_blank"
             ><i class="fa-solid fa-envelope me-2"></i
           ></a>
-          <a href="tel: 85587714482" target="_blank"
+          <a href="tel:85587714482" target="_blank"
             ><i class="fa-solid fa-phone me-2"></i
           ></a>
         </div>
