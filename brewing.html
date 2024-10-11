@@ -66,20 +66,30 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav nav-underline ms-auto">
-              <a
-                class="nav-link text-primary text-center"
-                aria-current="page"
-                href="index.html"
-                >Home</a
-              >
-              <a class="nav-link text-primary text-center" href="coffee.html"
-                >Coffee Selection</a
-              >
-              <a
-                class="nav-link active text-primary text-center"
-                href="brewing.html"
-                >Brewing Equipment</a
-              >
+              <li class="nav-item">
+                  <a
+                    class="nav-link text-primary text-center"
+                    aria-current="page"
+                    href="index.html"
+                    >Home
+                  </a>
+              </li>
+              <li class="nav-item dropdown text-center">
+                <a class="nav-link dropdown-toggle text-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Coffee Selection
+                </a>
+                <ul class="dropdown-menu filter-group bg-secondary text-center">
+                  <li><a class="dropdown-item text-primary" href="coffee.html" data-filter="*">All</a></li>
+                  <li><a class="dropdown-item text-primary" href="coffee.html" data-filter=".popular-menu">Popular Menu</a></li>
+                  <li><a class="dropdown-item text-primary" href="coffee.html" data-filter=".new-menu">New Menu</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary text-center" href="brewing.html"
+                  >Brewing Equipment
+                </a>
+              </li>
+              
               <a class="nav-link text-primary text-center" href="event.html"
                 >Events and Workshops</a
               >

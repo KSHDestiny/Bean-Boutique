@@ -1,15 +1,15 @@
 // ! Declare Variables
-var hotMenuElem = document.querySelector("#coffee-hot-menu");
-var coldMenuElem = document.querySelector("#coffee-cold-menu");
-var currentFilterValue = "*";
+var hotMenuElem = document.querySelector("#coffee-popular-menu");
+var coldMenuElem = document.querySelector("#coffee-new-menu");
+var currentFilterValue = localStorage.getItem("filter") || "*";
 
 var hotMenuIso = new Isotope(hotMenuElem, {
-  itemSelector: ".hot-menu",
+  itemSelector: ".popular-menu",
   layoutMode: "fitRows",
 });
 
 var coldMenuIso = new Isotope(coldMenuElem, {
-  itemSelector: ".cold-menu",
+  itemSelector: ".new-menu",
   layoutMode: "fitRows",
 });
 
@@ -18,54 +18,43 @@ var $grid = $(".menu-container").isotope({
   layoutMode: "fitRows",
   filter: function () {
     var $this = $(this);
-    var text = $this.text().toLowerCase();
-    var matchesSearch = text.includes($("#search-coffee").val().toLowerCase());
+    var titleText = $this.find(".card-title").text().toLowerCase();
+    var matchesSearch = titleText.includes($("#search-coffee").val().toLowerCase());
     var matchesCategory = $this.is(currentFilterValue);
 
     return matchesSearch && matchesCategory;
   },
 });
 
-var $hotGrid = $("#coffee-hot-menu").isotope({
-  itemSelector: ".menu-item.hot-menu",
+var $hotGrid = $("#coffee-popular-menu").isotope({
+  itemSelector: ".menu-item.popular-menu",
   layoutMode: "fitRows",
 });
 
-var $coldGrid = $("#coffee-cold-menu").isotope({
-  itemSelector: ".menu-item.cold-menu",
+var $coldGrid = $("#coffee-new-menu").isotope({
+  itemSelector: ".menu-item.new-menu",
   layoutMode: "fitRows",
 });
 
 // ! Use Typing Animation
-new TypeIt("#hot-menu-header", {
+new TypeIt("#popular-menu-header", {
   waitUntilVisible: true,
   speed: 150,
   loop: true,
 }).go();
 
-new TypeIt("#cold-menu-header", {
+new TypeIt("#new-menu-header", {
   waitUntilVisible: true,
   speed: 150,
   loop: true,
 }).go();
 
 // ! Use EventListener
-$(".filter-group").on("click", "button", function () {
+$(".filter-group").on("click", "a", function () {
   currentFilterValue = $(this).attr("data-filter");
-
   $grid.isotope();
   checkForResults();
-
-  if (currentFilterValue === ".cold-menu") {
-    document.querySelector("#hot-menu-header").classList.add("d-none");
-    document.querySelector("#cold-menu-header").classList.remove("d-none");
-  } else if (currentFilterValue === ".hot-menu") {
-    document.querySelector("#cold-menu-header").classList.add("d-none");
-    document.querySelector("#hot-menu-header").classList.remove("d-none");
-  } else {
-    document.querySelector("#hot-menu-header").classList.remove("d-none");
-    document.querySelector("#cold-menu-header").classList.remove("d-none");
-  }
+  filter(currentFilterValue);
 });
 
 document.querySelector("#search-coffee").addEventListener("input", function () {
@@ -92,9 +81,26 @@ function checkForResults() {
     $("#no-cold-results").addClass("d-none");
   }
 
-  if (currentFilterValue === ".hot-menu") {
+  if (currentFilterValue === ".popular-menu") {
     $("#no-cold-results").addClass("d-none");
-  } else if (currentFilterValue === ".cold-menu") {
+  } else if (currentFilterValue === ".new-menu") {
     $("#no-hot-results").addClass("d-none");
   }
 }
+
+function filter($currentFilterValue) {
+  if (currentFilterValue === ".new-menu") {
+    document.querySelector("#popular-menu-header").classList.add("d-none");
+    document.querySelector("#new-menu-header").classList.remove("d-none");
+  } else if (currentFilterValue === ".popular-menu") {
+    document.querySelector("#new-menu-header").classList.add("d-none");
+    document.querySelector("#popular-menu-header").classList.remove("d-none");
+  } else {
+    document.querySelector("#popular-menu-header").classList.remove("d-none");
+    document.querySelector("#new-menu-header").classList.remove("d-none");
+  }
+
+  localStorage.removeItem("filter");
+}
+
+filter();

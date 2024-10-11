@@ -34,3 +34,10 @@ navLinks.forEach((link) => {
     this.classList.add("active");
   });
 });
+
+document.querySelectorAll(".filter-group a").forEach(function (item) {
+  item.addEventListener("click", function () {
+    currentFilterValue = this.getAttribute("data-filter");
+    localStorage.setItem("filter", currentFilterValue);
+  });
+});

@@ -66,20 +66,30 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav nav-underline ms-auto">
-              <a
-                class="nav-link text-primary text-center"
-                aria-current="page"
-                href="index.html"
-                >Home</a
-              >
-              <a
-                class="nav-link active text-primary text-center"
-                href="coffee.html"
-                >Coffee Selection</a
-              >
-              <a class="nav-link text-primary text-center" href="brewing.html"
-                >Brewing Equipment</a
-              >
+              <li class="nav-item">
+                  <a
+                    class="nav-link text-primary text-center"
+                    aria-current="page"
+                    href="index.html"
+                    >Home
+                  </a>
+              </li>
+              <li class="nav-item dropdown text-center">
+                <a class="nav-link dropdown-toggle text-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Coffee Selection
+                </a>
+                <ul class="dropdown-menu filter-group bg-secondary text-center">
+                  <li><a class="dropdown-item text-primary" href="#" data-filter="*">All</a></li>
+                  <li><a class="dropdown-item text-primary" href="#" data-filter=".popular-menu">Popular Menu</a></li>
+                  <li><a class="dropdown-item text-primary" href="#" data-filter=".new-menu">New Menu</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary text-center" href="brewing.html"
+                  >Brewing Equipment
+                </a>
+              </li>
+              
               <a class="nav-link text-primary text-center" href="event.html"
                 >Events and Workshops</a
               >
@@ -182,78 +192,53 @@
           <span class="h3 pe-3">Available Coffee Menu</span>
         </div>
         <div class="input-group ms-auto w-50">
-          <div
-            class="filter-group input-group ms-auto"
-            role="group"
-            aria-label="Default button group"
+          <input
+            id="search-coffee"
+            class="form-control"
+            placeholder="Search for coffee beans"
           >
-            <input
-              id="search-coffee"
-              class="form-control"
-              placeholder="Search for coffee"
-            >
-            <button type="button" class="btn btn-primary" data-filter="*">
-              All
-            </button>
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-filter=".hot-menu"
-            >
-              Hot
-            </button>
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-filter=".cold-menu"
-            >
-              Cold
-            </button>
-          </div>
         </div>
       </div>
       <h4
         class="text-white opacity-75 mt-3 mb-1 text-center"
-        id="hot-menu-header"
+        id="popular-menu-header"
       >
-        Hot Selections <i class="fa-solid fa-mug-hot ps-1"></i>
+        Popular Selections <i class="fa-solid fa-face-smile-beam"></i>
       </h4>
       <div
         id="no-hot-results"
         class="d-none h2 text-center text-primary my-5 py-5"
       >
-        No such hot coffee found!
+        No such popular coffee beans is found!
       </div>
-      <article class="row g-3 menu-container" id="coffee-hot-menu">
+      <article class="row g-3 menu-container" id="coffee-popular-menu">
         <div
-          class="card menu-item hot-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
+          class="card menu-item popular-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
         >
           <div class="overflow-hidden rounded">
             <img
-              src="./images/Espresso.jpg"
+              src="./images/Arabica.jpg"
               class="card-img-top image"
-              alt="Espresso Image"
+              alt="Arabica Beans"
             >
           </div>
           <div class="card-body d-flex flex-column justify-content-between">
             <h5 class="card-title">
-              Espresso (Hot) <span class="float-end">$2.99</span>
+              Arabica <span class="float-end">$5.49 per kg</span>
             </h5>
             <div class="text-primary opacity-75">
               <small class="card-text">
-                A concentrated coffee brewed by forcing hot water through
-                finely-ground coffee beans under high pressure </small
+                Grown at higher altitudes in regions such as Latin America, Africa, and Asia. A wide range of flavor profiles, from fruity and floral to chocolaty and nutty </small
               ><br>
               <br>
               <small class="card-text"
-                >Taste : <span>slightly bitter, roasted taste</span></small
+                >Taste : <span>smooth, nuanced flavors and pleasant acidity</span></small
               >
               <br>
               <small class="card-text">
                 Brewing Method :
                 <span>
-                  Brewed by forcing hot water through finely-ground coffee at
-                  high pressure.</span
+                  the pour-over method is ideal as it brings out their delicate, floral, and fruity notes</span
                 > </small
               ><br><br>
             </div>
@@ -274,81 +259,31 @@
           </div>
         </div>
         <div
-          class="card menu-item hot-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
+          class="card menu-item popular-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
         >
           <div class="overflow-hidden rounded">
             <img
-              src="./images/Caffè_americano.jpg"
+              src="./images/Robusta.jpg"
               class="card-img-top image"
-              alt="Americano Image"
+              alt="Robusta"
            >
           </div>
           <div class="card-body d-flex flex-column justify-content-between">
             <h5 class="card-title">
-              Caffè americano (Hot) <span class="float-end">$3.49</span>
+              Robusta <span class="float-end">$5.49 per kg</span>
             </h5>
             <div class="text-primary opacity-75">
               <small class="card-text">
-                A simple yet delicious coffee beverage made by diluting one or
-                two shots of espresso with hot water </small
+                Robusta plants thrive at lower altitudes and are predominantly cultivated in regions like Africa and Southeast Asia. A rich crema and a strong, earthy taste
+              </small
               ><br><br>
               <small class="card-text"
                 >Taste :
-                <span> smooth, mellow taste with a mild bitterness</span></small
-              >
-              <small class="card-text">
-                Brewing Method :
-                <span>Diluting a shot of espresso with hot water</span>
-              </small>
-            </div>
-            <br>
-            <div class="d-flex align-items-center justify-content-between">
-              <div>
-                <i class="fa-solid fa-star color-warning"></i>
-                <i class="fa-solid fa-star color-warning"></i>
-                <i class="fa-solid fa-star color-warning"></i>
-                <i class="fa-solid fa-star color-warning"></i>
-                <i class="fa-solid fa-star color-warning"></i>
-              </div>
-              <a
-                href="shopping.html"
-                class="btn btn-secondary text-white float-end"
-                >Add to Cart <i class="fa-solid fa-cart-shopping ps-1"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="card menu-item hot-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
-        >
-          <div class="overflow-hidden rounded">
-            <img
-              src="./images/Cappuccino.jpg"
-              class="card-img-top image"
-              alt="Cappuccino Image"
-           >
-          </div>
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">
-              Cappuccino (Hot) <span class="float-end">$3.49</span>
-            </h5>
-            <div class="text-primary opacity-75">
-              <small class="card-text">
-                Coffee drink made with equal parts espresso, steamed milk, and
-                frothed milk </small
-              ><br><br>
-              <small class="card-text">
-                Taste :
-                <span>
-                  slightly sweet flavor with a hint of bitterness</span
-                > </small
+                <span> bold, strong flavor and higher caffeine</span></small
               ><br>
               <small class="card-text">
                 Brewing Method :
-                <span
-                  >Brewing a shot of espresso with steamed milk and thick milk
-                  foam on top</span
-                >
+                <span>French press, or Moka pot to highlight its strong, full-bodied characteristics</span>
               </small>
             </div>
             <br>
@@ -369,28 +304,26 @@
           </div>
         </div>
         <div
-          class="card menu-item hot-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
+          class="card menu-item popular-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
         >
           <div class="overflow-hidden rounded">
             <img
-              src="./images/Latte.jpg"
+              src="./images/Excelsa.jpg"
               class="card-img-top image"
-              alt="Latte Image"
+              alt="Excelsa"
            >
           </div>
           <div class="card-body d-flex flex-column justify-content-between">
             <h5 class="card-title">
-              Cafe Latte (Hot) <span class="float-end">$3.49</span>
+              Excelsa <span class="float-end">$5.49 per kg</span>
             </h5>
             <div class="text-primary opacity-75">
               <small class="card-text">
-                A hot café latte features a smooth, creamy texture, combining
-                rich espresso with steamed milk and a light layer of micro-foam
-                on top </small
-              ><br><br>
+                Excelsa beans are primarily grown in Southeast Asia and are commonly used to add depth and complexity to blends
+              </small><br><br>
               <small class="card-text"
                 >Taste :
-                <b> balanced flavor with the milk's sweetness</b></small
+                <b> complex flavor profile, which often includes fruity, spicy, and tart notes</b></small
               ><br>
               <small class="card-text">
                 Brewing Method :
@@ -419,45 +352,45 @@
       </article>
       <h4
         class="text-white opacity-75 mt-5 mb-1 text-center"
-        id="cold-menu-header"
+        id="new-menu-header"
       >
-        Cold Selections <i class="fa-regular fa-snowflake ps-1"></i>
+        New Arrivals Selections <i class="fa-solid fa-heart"></i>
       </h4>
       <div
         id="no-cold-results"
         class="d-none h2 text-center text-primary my-5 py-5"
       >
-        No such cold coffee found!
+        No such new arrivals coffee beans is found!
       </div>
-      <article class="row g-3 menu-container" id="coffee-cold-menu">
+      <article class="row g-3 menu-container" id="coffee-new-menu">
         <div
-          class="card menu-item cold-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
+          class="card menu-item new-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
         >
           <div class="overflow-hidden rounded">
             <img
-              src="./images/americano_cold.jpg"
+              src="./images/Libérica.jpg"
               class="card-img-top image"
-              alt="Cold Americano Image"
+              alt="Liberica"
            >
           </div>
           <div class="card-body d-flex flex-column justify-content-between">
             <h5 class="card-title">
-              Americano (Cold) <span class="float-end">$3.99</span>
+              Liberica <span class="float-end">$5.49 per kg</span>
             </h5>
             <div class="text-primary opacity-75">
               <small class="card-text">
-                A refreshing twist on the classic drink, featuring bold espresso
-                diluted with cold water and served over ice </small
+                Originating from West Africa, Liberica beans are characterized by their large size and asymmetrical shape </small
               ><br><br>
-              <small
-                >Taste : <span>less bitter and more refreshing</span></small
-              >
-              <small
-                ><br>
+              <small class="card-text">
+                Taste :
+                <span>
+                  a distinctively fruity and floral flavor</span
+                > </small
+              ><br>
+              <small class="card-text">
                 Brewing Method :
                 <span
-                  >Diluting a shot of espresso with cold water and serving it
-                  over ice.</span
+                  >French press enhances their bold, smoky, and woody flavor profile</span
                 >
               </small>
             </div>
@@ -479,18 +412,64 @@
           </div>
         </div>
         <div
-          class="card menu-item cold-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
+          class="card menu-item new-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
         >
           <div class="overflow-hidden rounded">
             <img
-              src="./images/Cappuccino_Cold.jpg"
+              src="./images/Typica.png"
               class="card-img-top image"
-              alt="Cold Cappuccino Image"
+              alt="Typica"
            >
           </div>
           <div class="card-body d-flex flex-column justify-content-between">
             <h5 class="card-title">
-              Cappuccino (Cold) <span class="float-end">$3.99</span>
+              Typica <span class="float-end">$5.99 per kg</span>
+            </h5>
+            <div class="text-primary opacity-75">
+              <small class="card-text">
+                Originating from Yemen, Typica beans have a smooth, well-balanced profile with subtle floral and fruity notes </small
+              ><br><br>
+              <small
+                >Taste : <span>delicate flavor and mild acidity</span></small
+              >
+              <small
+                ><br>
+                Brewing Method :
+                <span
+                  >the pour-over method to enhance its sweet, nuanced flavors and acidity</span
+                >
+              </small>
+            </div>
+            <br>
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+                <i class="fa-solid fa-star color-warning"></i>
+              </div>
+              <a
+                href="shopping.html"
+                class="btn btn-secondary text-white float-end"
+                >Add to Cart <i class="fa-solid fa-cart-shopping ps-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card menu-item new-menu col-xl-3 offset-xl-1z col-md-6 col-12 bg-secondary text-white p-0"
+        >
+          <div class="overflow-hidden rounded">
+            <img
+              src="./images/Geisha.jpg"
+              class="card-img-top image"
+              alt="Geisha"
+           >
+          </div>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">
+              Geisha <span class="float-end">$5.99 per kg</span>
             </h5>
             <div class="text-primary opacity-75">
               <small class="card-text">
@@ -526,81 +505,31 @@
           </div>
         </div>
         <div
-          class="card menu-item cold-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
+          class="card menu-item new-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
         >
           <div class="overflow-hidden rounded">
             <img
-              src="./images/Cafe_Latte_(Cold).jpg"
+              src="./images/Bourbon.jpg"
               class="card-img-top image"
-              alt="Cold Latte Image"
+              alt="Bourbon"
            >
           </div>
           <div class="card-body d-flex flex-column justify-content-between">
             <h5 class="card-title">
-              Coffee Latte (Cold) <span class="float-end">$3.99</span>
+              Bourbon <span class="float-end">$5.99 per kg</span>
             </h5>
             <div class="text-primary opacity-75">
               <small class="card-text">
-                A smooth, creamy taste with a delicate balance between the
-                boldness of espresso and the richness of cold milk. </small
+                These beans are often grown in high-altitude regions of Central and South America and are cherished for their smooth, well-balanced profile. </small
               ><br><br>
               <small>
                 Taste :
-                <b> slight bitterness with velvety sweetness</b> </small
+                <b> sweet, caramel-like flavors and creamy body</b> </small
               ><br>
               <small>
                 Brewing Method :
                 <b
-                  >Brewing espresso first, then pouring it over ice and adding
-                  cold milk</b
-                >
-              </small>
-            </div>
-            <br>
-            <div class="d-flex align-items-center justify-content-between">
-              <div>
-                <i class="fa-solid fa-star color-warning"></i>
-                <i class="fa-solid fa-star color-warning"></i>
-                <i class="fa-solid fa-star color-warning"></i>
-                <i class="fa-solid fa-star color-warning"></i>
-                <i class="fa-solid fa-star color-warning"></i>
-              </div>
-              <a
-                href="shopping.html"
-                class="btn btn-secondary text-white float-end"
-                >Add to Cart <i class="fa-solid fa-cart-shopping ps-1"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="card menu-item cold-menu col-xl-3 col-md-6 col-12 bg-secondary text-white p-0"
-        >
-          <div class="overflow-hidden rounded">
-            <img
-              src="./images/Mocha.jpg"
-              class="card-img-top image"
-              alt="Mocha Image"
-           >
-          </div>
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="card-title">
-              Mocha (Cold) <span class="float-end">$3.99</span>
-            </h5>
-            <div class="text-primary opacity-75">
-              <small class="card-text">
-                A rich, chocolatey flavor combined with smooth espresso and cold
-                milk that's perfect for chocolate lovers </small
-              ><br><br>
-              <small class="card-text"
-                >Taste :
-                <span> Rich, chocolatey, refreshing delight</span></small
-              ><br>
-              <small class="card-text">
-                Brewing Method :
-                <span
-                  >Mixing espresso with cold chocolate syrup and milk, served
-                  over ice</span
+                  >the pour-over method</b
                 >
               </small>
             </div>

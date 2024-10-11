@@ -73,18 +73,30 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav nav-underline ms-auto">
-              <a
-                class="nav-link active text-primary text-center"
-                aria-current="page"
-                href="index.html"
-                >Home</a
-              >
-              <a class="nav-link text-primary text-center" href="coffee.html"
-                >Coffee Selection</a
-              >
-              <a class="nav-link text-primary text-center" href="brewing.html"
-                >Brewing Equipment</a
-              >
+              <li class="nav-item">
+                  <a
+                    class="nav-link text-primary text-center"
+                    aria-current="page"
+                    href="index.html"
+                    >Home
+                  </a>
+              </li>
+              <li class="nav-item dropdown text-center">
+                <a class="nav-link dropdown-toggle text-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Coffee Selection
+                </a>
+                <ul class="dropdown-menu filter-group bg-secondary text-center">
+                  <li><a class="dropdown-item text-primary" href="coffee.html" data-filter="*">All</a></li>
+                  <li><a class="dropdown-item text-primary" href="coffee.html" data-filter=".popular-menu">Popular Menu</a></li>
+                  <li><a class="dropdown-item text-primary" href="coffee.html" data-filter=".new-menu">New Menu</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary text-center" href="brewing.html"
+                  >Brewing Equipment
+                </a>
+              </li>
+              
               <a class="nav-link text-primary text-center" href="event.html"
                 >Events and Workshops</a
               >
@@ -279,7 +291,7 @@
     <!-- Coffee Menu -->
     <section class="container row mt-5 mx-auto text-primary">
       <h4 class="mb-3">
-        Popular Menu For Coffee
+        Popular Menu For Coffee Beans
         <a
           href="coffee.html"
           class="btn btn-secondary text-primary border border-1 float-end"
@@ -289,15 +301,14 @@
       <section class="col-lg-4 col-md-6 col-12 mt-lg-0 mt-2">
         <figure class="text-center">
           <img
-            src="./images/Espresso.jpg"
+            src="./images/Arabica.jpg"
             class="w-75 rounded image"
-            alt="Espresso Image"
+            alt="Arabica Beans"
           >
           <figcaption class="mt-3">
-            <h5>Espresso</h5>
+            <h5>Arabica</h5>
             <p>
-              A concentrated coffee brewed by forcing hot water through
-              finely-ground coffee beans under high pressure
+            Grown at higher altitudes in regions such as Latin America, Africa, and Asia. A wide range of flavor profiles, from fruity and floral to chocolaty and nutty
             </p>
           </figcaption>
         </figure>
@@ -305,15 +316,14 @@
       <section class="col-lg-4 col-md-6 col-12 mt-lg-0 mt-5">
         <figure class="text-center">
           <img
-            src="./images/Caffè_americano.jpg"
+            src="./images/Robusta.jpg"
             class="w-75 rounded image"
-            alt="Coffee Americano Image"
+            alt="Robusta Beans"
           >
           <figcaption class="mt-3">
-            <h5>Caffè americano</h5>
+            <h5>Robusta</h5>
             <p>
-              A simple yet delicious coffee beverage made by diluting one or two
-              shots of espresso with hot water
+              Robusta plants thrive at lower altitudes and are predominantly cultivated in regions like Africa and Southeast Asia. A rich crema and a strong, earthy taste
             </p>
           </figcaption>
         </figure>
@@ -321,15 +331,14 @@
       <section class="col-lg-4 col-md-6 col-12 mt-lg-0 mt-5 mx-md-auto">
         <figure class="text-center">
           <img
-            src="./images/Cappuccino.jpg"
+            src="./images/Excelsa.jpg"
             class="w-75 rounded image"
-            alt="Coffee Cappuccino Image"
+            alt="Excelsa Beans"
           >
           <figcaption class="mt-3">
-            <h5>Cappuccino</h5>
+            <h5>Excelsa</h5>
             <p>
-              Coffee drink made with equal parts espresso, steamed milk, and
-              frothed milk
+             Excelsa beans are primarily grown in Southeast Asia and are commonly used to add depth and complexity to blends
             </p>
           </figcaption>
         </figure>

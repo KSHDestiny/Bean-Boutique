@@ -66,24 +66,34 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav nav-underline ms-auto">
-              <a
-                class="nav-link text-primary text-center"
-                aria-current="page"
-                href="index.html"
-                >Home</a
-              >
-              <a class="nav-link text-primary text-center" href="coffee.html"
-                >Coffee Selection</a
-              >
-              <a class="nav-link text-primary text-center" href="brewing.html"
-                >Brewing Equipment</a
-              >
+              <li class="nav-item">
+                  <a
+                    class="nav-link text-primary text-center"
+                    aria-current="page"
+                    href="index.html"
+                    >Home
+                  </a>
+              </li>
+              <li class="nav-item dropdown text-center">
+                <a class="nav-link dropdown-toggle text-primary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Coffee Selection
+                </a>
+                <ul class="dropdown-menu filter-group bg-secondary text-center">
+                  <li><a class="dropdown-item text-primary" href="coffee.html" data-filter="*">All</a></li>
+                  <li><a class="dropdown-item text-primary" href="coffee.html" data-filter=".popular-menu">Popular Menu</a></li>
+                  <li><a class="dropdown-item text-primary" href="coffee.html" data-filter=".new-menu">New Menu</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary text-center" href="brewing.html"
+                  >Brewing Equipment
+                </a>
+              </li>
+              
               <a class="nav-link text-primary text-center" href="event.html"
                 >Events and Workshops</a
               >
-              <a
-                class="nav-link active text-primary text-center"
-                href="shopping.html"
+              <a class="nav-link text-primary text-center" href="shopping.html"
                 >Shopping Cart</a
               >
               <a class="nav-link text-primary text-center" href="offer.html"
@@ -180,47 +190,43 @@
           <h3 class="text-primary">Your Orders</h3>
           <div class="row">
             <figure class="col-2">
-              <img
-                src="./images/Cappuccino_Cold.jpg"
-                class="w-100"
-                alt="Cappuccino Cold"
-             >
+              <img src="./images/Arabica.jpg" class="w-100" alt="Arabica">
             </figure>
             <div class="col-4">
-              <span><small>Name : </small> Cappuccino (Cold)</span><br>
-              <span><small>Price : </small> $3.99</span><br>
+              <span><small>Name : </small> Arabica</span><br>
+              <span><small>Price : </small> $5.49 per kg</span><br>
               <a href="javascript:;">Remove</a>
             </div>
             <figure class="col-2">
               <img
-                src="./images/Cappuccino_Cold.jpg"
+                src="./images/Robusta.jpg"
                 class="w-100"
-                alt="Cappuccino Cold"
+                alt="Robusta"
              >
             </figure>
             <div class="col-4">
-              <span><small>Name : </small> Cappuccino (Cold)</span><br>
-              <span><small>Price : </small> $3.99</span><br>
-              <a href="javascript:;">Remove</a>
-            </div>
-            <figure class="col-2">
-              <img src="./images/Mocha.jpg" class="w-100" alt="Mocha (Cold)">
-            </figure>
-            <div class="col-4">
-              <span><small>Name : </small> Mocha (Cold)</span><br>
-              <span><small>Price : </small> $3.99</span><br>
+              <span><small>Name : </small>Robusta</span><br>
+              <span><small>Price : </small> $5.49 per kg</span><br>
               <a href="javascript:;">Remove</a>
             </div>
             <figure class="col-2">
               <img
-                src="./images/Caffè_americano.jpg"
+                src="./images/Typica.png"
                 class="w-100"
-                alt="Caffè americano (Hot)"
+                alt="Typica"
              >
             </figure>
             <div class="col-4">
-              <span><small>Name : </small>Caffè americano (Hot)</span><br>
-              <span><small>Price : </small> $3.49</span><br>
+              <span><small>Name : </small> Typica</span><br>
+              <span><small>Price : </small> $5.99 per kg</span><br>
+              <a href="javascript:;">Remove</a>
+            </div>
+            <figure class="col-2">
+              <img src="./images/Arabica.jpg" class="w-100" alt="Arabica">
+            </figure>
+            <div class="col-4">
+              <span><small>Name : </small> Arabica</span><br>
+              <span><small>Price : </small> $5.49 per kg</span><br>
               <a href="javascript:;">Remove</a>
             </div>
           </div>
@@ -232,7 +238,7 @@
               <tr>
                 <th>#</th>
                 <th>Name</th>
-                <th>Quality</th>
+                <th>Kilogram</th>
                 <th>Price</th>
                 <th>Total Price</th>
               </tr>
@@ -240,45 +246,35 @@
             <tbody>
               <tr>
                 <td>1</td>
-                <td>Cappuccino (Cold)</td>
+                <td>Arabica</td>
                 <td>2</td>
-                <td>$3.99</td>
-                <td>$7.98</td>
+                <td>$5.49</td>
+                <td>$10.98</td>
               </tr>
               <tr>
                 <td>2</td>
-                <td>Mocha (Cold)</td>
+                <td>Robusta</td>
                 <td>1</td>
-                <td>$3.99</td>
-                <td>$3.99</td>
+                <td>$5.49</td>
+                <td>$5.49</td>
               </tr>
               <tr>
                 <td>3</td>
-                <td>Caffè americano (Hot)</td>
+                <td>Typica</td>
                 <td>1</td>
-                <td>$3.49</td>
-                <td>$3.49</td>
+                <td>$5.99</td>
+                <td>$5.99</td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
                 <td colspan="4">Total</td>
-                <td>$15.46</td>
+                <td>$22.46</td>
               </tr>
             </tfoot>
           </table>
           <button class="btn btn-primary float-end">Confirm to Order</button>
         </section>
-        <!-- <section class="row">
-        <figure class="col-2">
-          <img
-            src="./images/Cart.jpg"
-            width="100%"
-            class="rounded"
-            alt="Cart"
-         >
-        </figure>
-      </section> -->
       </div>
     </div>
     <footer
