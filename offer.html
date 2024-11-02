@@ -207,7 +207,7 @@
             type="button"
             class="btn btn-primary"
             data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
+            data-bs-target="#subscribeModal"
           >
             Subscribe Now
           </button>
@@ -215,15 +215,15 @@
       </figure>
       <div
         class="modal fade mt-5 pt-5"
-        id="exampleModal"
+        id="subscribeModal"
         tabindex="-1"
-        aria-labelledby="exampleModalLabel"
+        aria-labelledby="subscribeModalLabel"
         aria-hidden="true"
       >
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <span class="display-4 modal-title fs-5" id="exampleModalLabel">
+              <span class="display-4 modal-title fs-5" id="subscribeModalLabel">
                 Sign up to subscribe for regular coffee deliveries
               </span>
               <button
@@ -360,6 +360,88 @@
           <small class="card-text text-white-50">For One Year <b>(Get 2 Months Free)</b></small>
           <p class="text-white">Commit to a year of rich, freshly roasted coffee. Enjoy the ultimate convenience and value with two months free!</p>
           <a href="#" class="btn btn-primary mt-4">Subscribe Now</a>
+        </div>
+      </div>
+    </section>
+    <section class="container mx-auto text-white my-5 row">
+      <h3>Reviews 
+        <button type="button" class="float-end btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Send Your Review</button>
+      </h3>
+      <div class="card col-lg-4 col-md-6 col-12 bg-black">
+        <img src="./images/Person1.jpg" class="card-img-top" alt="Review Person 1">
+        <div class="card-body">
+          <p class="card-text text-white">I absolutely love Coffee Bean Boutique! The quality of their beans is top-notch, and they have such a unique selection. The staff was knowledgeable and helped me choose the perfect roast based on my taste. Plus, the packaging was so cute—it felt like a real treat to unbox! I'll definitely be coming back to try more varieties. Highly recommended!</p>
+        </div>
+      </div>
+      <div class="card col-lg-4 col-md-6 col-12 bg-black">
+        <img src="./images/Person2.jpg" class="card-img-top" alt="Review Person 2">
+        <div class="card-body">
+          <p class="card-text text-white">Coffee Bean Boutique has quickly become my go-to for specialty coffee. The prices are reasonable, and I appreciate their sustainable sourcing practices. The only reason I'm not giving it five stars is that shipping took a bit longer than expected. Still, it's worth the wait! I'm looking forward to exploring more of their offerings.</p>
+        </div>
+      </div>
+      <div class="card col-lg-4 col-md-6 col-12 bg-black mx-auto">
+        <img src="./images/Person3.jpg" class="card-img-top" alt="Review Person 3">
+        <div class="card-body">
+          <p class="card-text text-white">This shop is a coffee lover's dream! The staff at Coffee Bean Boutique truly know their beans. I also love their subscription service; I get a fresh bag of beans every month, and it's always a fun surprise. If you're a fan of premium coffee, you have to check them out. They never disappoint.</p>
+        </div>
+      </div>
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="reviewLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content text-secondary">
+            <div class="modal-header">
+              <h3 class="modal-title fs-5" id="reviewLabel">Review</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="#">
+                <div class="d-flex align-items-center mt-3">
+                  <label for="firstName" class="col-3 mx-auto">First Name : </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="John"
+                    id="firstName"
+                 >
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <label for="lastName" class="col-3 mx-auto"
+                    >Last Name :
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Doe"
+                    id="lastName"
+                 >
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <label for="reviewEmail" class="col-3 mx-auto"
+                    >Email :
+                  </label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="johndoe@gmail.com"
+                    id="reviewEmail"
+                 >
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <label for="review" class="col-3 mx-auto"
+                    >Review :
+                  </label>
+                  <textarea
+                    class="form-control"
+                    placeholder="Write your honest review on Bean Boutique"
+                    rows="3"
+                    id="review"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Send</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
